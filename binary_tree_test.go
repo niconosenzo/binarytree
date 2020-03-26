@@ -1,4 +1,4 @@
-package main
+package binary
 
 import "testing"
 
@@ -14,8 +14,8 @@ func TestOKBinary_tree(t *testing.T) {
 		{63, []int{1, 2, 9, 20, 31, 45, 63, 70, 100}},
 	}
 	for _, test := range tests {
-		if !binarySearch(test.guess, test.list) {
-			t.Errorf("binarySearch(%d, %v) = false", test.guess, test.list)
+		if !Search(test.guess, test.list) {
+			t.Errorf("Search(%d, %v) = false", test.guess, test.list)
 		}
 	}
 }
@@ -32,8 +32,8 @@ func TestFailBinary_tree(t *testing.T) {
 		{33, []int{1, 2, 9, 20, 31, 45, 63, 70, 100}},
 	}
 	for _, test := range tests {
-		if binarySearch(test.guess, test.list) {
-			t.Errorf("binarySearch(%d, %v) = true", test.guess, test.list)
+		if Search(test.guess, test.list) {
+			t.Errorf("Search(%d, %v) = true", test.guess, test.list)
 		}
 	}
 }
