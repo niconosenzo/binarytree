@@ -1,7 +1,7 @@
 package binary
 
 //Search will receive a slice of integers along with a number to search within the slice
-func search(guess int, list []int) bool {
+func Search(guess int, list []int) bool {
 
 	low := 0
 	high := len(list) - 1
